@@ -13,7 +13,6 @@ import jakarta.persistence.Table;
 public class Login {
 	
 	@Id
-	@GeneratedValue(strategy = GenerationType.IDENTITY)
 	@Column(name = "username")
     private String username;
 	

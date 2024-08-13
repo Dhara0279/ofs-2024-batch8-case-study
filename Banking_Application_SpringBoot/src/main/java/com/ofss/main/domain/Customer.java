@@ -2,7 +2,7 @@ package com.ofss.main.domain;
 
 import java.time.LocalDate;
 
-import com.ofss.main.LocalDateAdapter;
+import com.fasterxml.jackson.annotation.JsonFormat;
 
 import jakarta.persistence.CascadeType;
 import jakarta.persistence.Column;
@@ -139,7 +139,7 @@ public class Customer {
         EmailId = emailId;
     }
 
-    @XmlJavaTypeAdapter(LocalDateAdapter.class) // Custom adapter for LocalDate
+   
     public LocalDate getDateofBirth() {
         return DateofBirth;
     }
