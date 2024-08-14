@@ -33,3 +33,6 @@ fs.writeFileSync(filePath, updatedJsonData, 'utf8');
 
 console.log("Employees added successfully");
 
+const content = fs.readFileSync(filePath, 'utf8');
+fileData = JSON.parse(content);
+console.log(fileData)
