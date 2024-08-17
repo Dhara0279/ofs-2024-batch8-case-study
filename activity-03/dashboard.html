@@ -1,0 +1,153 @@
+<!--
+ Copyright (c) 2014, 2024, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+<div class="oj-hybrid-padding">
+
+<!-- ----------------------------------ACTIVITY 2------------------------------------------------- -->
+
+ 
+  <!-- <div>
+    <h2>Input Text</h2>
+    <oj-c-input-text
+    id="text-input"
+    value="{{firstname}}"
+    label-hint="Enter First Name"
+    label-edge="inside">
+   </oj-c-input-text>
+   <h3>
+    Hey! <oj-bind-text value="[[firstname]]"></oj-bind-text>
+   </h3>
+</div>
+
+<br>
+
+<div>
+  <h2>Input Number</h2>
+  <oj-c-input-number
+  value="{{salary}}"
+  label-hint="Enter Salary"
+  min="0"
+  step="0"></oj-c-input-number>
+  <h3>
+    Salary is <oj-bind-text value="[[salary]]"></oj-bind-text>
+   </h3>
+</div>
+
+<br>
+
+<div>
+  <h3>Input Password</h3>
+  <oj-c-input-password
+    id="enabled1"
+    value="{{password}}"
+    
+    label-hint="Enter Password"
+    label-edge="inside"></oj-c-input-password>
+  <h3>
+    Password is <oj-bind-text value="[[password]]"></oj-bind-text>
+   </h3>  
+</div>
+
+<br>
+
+<div>
+  <h2>Input Date</h2>
+  <oj-c-input-date-text
+  
+  value="{{date}}"
+  label-hint="Enter Date"
+  label-edge="inside"></oj-c-input-date-text>
+  <h3>
+    Date is <oj-bind-text value="[[date]]"></oj-bind-text>
+   </h3>  
+</div>
+
+<div>
+  <h1>Form Layout</h1>
+  <oj-c-form-layout
+              id="ofl1"
+              label-edge="inside"
+              colspan-wrap="[[colspanWrap]]"
+              max-columns="3"
+              direction="row">
+
+<oj-c-input-text label-hint="Age"></oj-c-input-text>
+<oj-c-input-text label-hint="Gender"></oj-c-input-text>
+<oj-c-input-text label-hint="Nationality"></oj-c-input-text>
+<oj-c-input-text
+  column-span="3"
+  label-hint="Country"
+  value="India"></oj-c-input-text>
+</oj-c-form-layout>
+</div>  -->
+
+  
+
+<!-- ---------------------------------------ACTIVITY-3--------------------------------------------- -->
+ <h6>Info</h6>
+            <div>
+              <oj-c-button id="icon_button1" display="icons" label="Icon Button">
+                <span slot="startIcon" class="oj-ux-ico-information"></span>
+              </oj-c-button>
+
+                  <oj-c-menu-button
+                    chroming="outlined"
+                    id="outlinedMenuWithStartIcon"
+                    display="icons"
+                    items="[[menuItems]]"          
+                    disabled="[[disableControls]]"
+                    label="Outlined Button">
+                    <span slot="startIcon" class="oj-ux-ico-share"></span>
+                  </oj-c-menu-button>
+                  <oj-c-menu-button
+                    chroming="outlined"
+                    id="outlinedMenuWithoutStartIcon"
+                    display="icons"
+                    items="[[menuItems]]"          
+                    disabled="[[disableControls]]"
+                    label="Outlined Button">
+                  </oj-c-menu-button>
+              </div>
+
+              <div>
+                <!-- Messages -->
+                <oj-c-message-toast
+                  data="[[messages]]"
+                  on-oj-close="[[closeMessage]]"></oj-c-message-toast>
+              </div>
+<br><br>
+<div>
+  <oj-c-progress-bar id="progressBar" value="{{progressValue}}"></oj-c-progress-bar>
+            <div class="oj-sm-margin-4x-vertical"></div>
+            <oj-label-value>
+              <oj-label slot="label" label-id="status">Status</oj-label>
+              <div
+                slot="value"
+                id="loadingRegion"
+                aria-labelledby="status"
+                aria-busy="true"
+                aria-describedby="progressBar">
+                <oj-bind-text value="[[loadingText]]"></oj-bind-text>
+              </div>
+            </oj-label-value>
+</div>
+</div> 
+
+
+
+
+
+<!-- <div>
+  <oj-c-button id="button1" on-oj-action="[[handleClick]]" label="Submit"></oj-c-button>
+</div> -->
+
+
+
+
+</div>
+
+
+
+
