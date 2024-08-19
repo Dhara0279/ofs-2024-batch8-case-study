@@ -1,0 +1,101 @@
+<!--
+ Copyright (c) 2014, 2024, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+ <style>
+  /* Ensure the body takes up the full height of the viewport */
+  html, body {
+      height: 100%;
+      margin: 0;
+  }
+  /* Flexbox container to center content vertically and horizontally */
+  .oj-hybrid-padding {
+      display: flex;
+      flex-direction: column;
+      /* justify-content: space-between; Distribute space between elements */
+      align-items: center; /* Center elements horizontally */
+      height: 100vh; /* Full viewport height */
+      padding: 10px; /* Optional: padding around the container */
+  }
+  #form-container {
+      width: 100%;
+      max-width: 900px; /* Limit form width */
+  }
+  /* Center the submit button and ensure it stays at the bottom */
+  .button-container {
+      text-align: center; /* Center the button horizontally */
+      margin-top: auto; /* Push the button to the bottom */
+  }
+</style>
+<div class="oj-hybrid-padding">
+  <h1>Register Here</h1>
+  <div id="form-container">
+    <h2 class="oj-typography-subheading-xs">Personal Information</h2>
+    <oj-c-form-layout id="personal-information" direction="row" max-columns="2">
+      <oj-c-input-text
+        id="username"
+        label-hint="Username"
+        required="true"
+        value="{{username}}"></oj-c-input-text>
+      <oj-c-input-text
+        id="password"
+        label-hint="Password"
+        required="true"
+        value="{{password}}"></oj-c-input-text>
+      <oj-c-input-text
+        id="firstname"
+        label-hint="First Name"
+        required="true"
+        value="{{firstname}}"></oj-c-input-text>
+      <oj-c-input-text
+        id="lastname"
+        label-hint="Last Name"
+        required="true"
+        value="{{lastname}}"></oj-c-input-text>
+      <oj-c-input-text
+        id="address"
+        label-hint="Address"
+        autocomplete="off"
+        value="{{address}}"></oj-c-input-text>
+      <oj-c-form-layout direction="row" columns="2">
+        <oj-c-select-single
+          id="state"
+          label-hint="State"
+          value="{{stateVal}}"
+          data="[[statesDP]]"
+          item-text="label"
+          required="true"></oj-c-select-single>
+        <oj-c-input-text
+          id="city"
+          label-hint="City"
+          value="{{city}}"></oj-c-input-text>
+      </oj-c-form-layout>
+      <oj-c-input-text
+        id="phone"
+        label-hint="Phone"
+        value="{{phonenumber}}"></oj-c-input-text>
+    <oj-c-form-layout direction="row" columns="2">   
+      <oj-c-input-text
+        id="email"
+        label-hint="Email"
+        value="{{email}}"></oj-c-input-text>
+        <oj-input-date 
+        label-hint="Date of Birth" 
+        autocomplete="off"
+        value="{{dob}}"></oj-input-date>
+      </oj-c-form-layout>
+    </oj-c-form-layout>
+    <div class="button-container">
+    <oj-c-button 
+    id="continue"
+    chroming="callToAction"
+    on-oj-action="[[buttonClick]]"
+    label="Submit">
+  </oj-c-button>
+</div>
+    
+</div>
+
+</div>
+

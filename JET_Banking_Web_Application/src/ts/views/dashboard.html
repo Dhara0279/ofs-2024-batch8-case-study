@@ -1,0 +1,66 @@
+<!--
+ Copyright (c) 2014, 2024, Oracle and/or its affiliates.
+ Licensed under The Universal Permissive License (UPL), Version 1.0
+ as shown at https://oss.oracle.com/licenses/upl/
+ -->
+ <style>
+  /* Ensure the body takes up the full height of the viewport */
+  html, body {
+      height: 50%;
+      margin: 0;
+  }
+  /* Flexbox container to center content vertically and horizontally */
+  .oj-hybrid-padding {
+      display: flex;
+      flex-direction: column;
+      /* justify-content: center; Center content vertically */
+      align-items: center; /* Center content horizontally */
+      height: 100vh; /* Full viewport height */
+      padding: 10px; /* Optional: padding around the container */
+  }
+  #form-container {
+      width: 100%;
+      max-width: 800px; /* Limit form width */
+      display: flex;
+      flex-direction: column;
+      align-items: center; /* Center items horizontally within the form */
+  }
+  .oj-flex-item {
+      margin-bottom: 10px; /* Add spacing between form elements */
+  }
+  .button-container {
+      text-align: center; /* Center the button horizontally */
+      margin-top: auto; /* Push the button to the bottom */
+  }
+</style>
+<div class="oj-hybrid-padding">
+  <div id="form-container">
+      <h1>Login</h1>
+      <div class="oj-sm-12 oj-md-6 oj-lg-6 oj-flex-item oj-sm-padding-2x-horizontal">
+          <oj-c-input-text
+              id="enablednovalue1"
+              value="{{username}}"
+              label-hint="Username"
+              label-edge="inside"></oj-c-input-text>
+      </div>
+      <br><br>
+      <div class="oj-sm-12 oj-md-6 oj-lg-6 oj-flex-item oj-sm-padding-2x-horizontal">
+          <oj-c-input-password 
+              id="enabled1"
+              label-hint="Password"
+              value="{{password}}"
+              label-edge="inside"></oj-c-input-password>
+      </div>
+      <br><br>
+      <!-- Button container -->
+      <div class="button-container">
+          <oj-c-button 
+              id="submit-button"
+              on-oj-action="[[buttonAction]]"
+              disabled="{{!isSubmitEnabled}}"
+              label="Submit">
+          </oj-c-button>
+      </div>
+  </div>
+</div>
+
